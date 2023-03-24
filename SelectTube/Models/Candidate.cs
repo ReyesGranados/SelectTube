@@ -9,7 +9,7 @@
         public string LinkedinUrl { get; set; }
         public DateTime DateAdded { get; set; }
         public CandidateStatus Status { get; set; }
-        public List<CandidateDocument> Documents { get; set; } = new List<CandidateDocument>();
+        public List<CandidateDocument>? Documents { get; set; }
     }
 
     public enum CandidateStatus
@@ -19,7 +19,7 @@
         Selected
     }
 
-     public class CandidateDocument
+    public class CandidateDocument
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -27,5 +27,6 @@
         public byte[] Content { get; set; }
     }
 }
+
 
 
